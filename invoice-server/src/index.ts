@@ -89,6 +89,19 @@ app.post('/createInvoice', async (req:Request, res:Response)=>{
  *               type: array
  *               items:
  *                  $ref: '#/components/schemas/Invoice'
+ * /getInvoice/customerId:
+ *   get:
+ *     summary:  Get all invoices from userId
+ *     description: Retrieve a list of all invoices of user.
+ *     responses:
+ *       '200':
+ *         description: A list of invoices.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                  $ref: '#/components/schemas/Invoice'
  * /createInvoice:
  *   post:
  *     summary: return invoice that create and save in mongoDB
